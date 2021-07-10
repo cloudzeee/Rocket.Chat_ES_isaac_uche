@@ -1,15 +1,78 @@
-INSTALLED ROCKET CHAT USING DIGITAL OCEAN (STEPS BELOW) 
+ //////////////////////////////////////////
+  
+  Rocket Chat Server
+  
+  URL - https://purplecheque.ga
+  
+  Email - rocket@gazzelle.onmicrosoft.com
+  
+  Username - rocket
+  
+  password - Rocketchat
+  
+  /////////////////////////////////////////
+  
 
--Log into Digital Ocean; Go to the Market place and searched for rocket chat  
+<b>INSTALLED ROCKET CHAT USING DIGITAL OCEAN (STEPS BELOW)</b>
 
-Clicked on create rocket chat droplet  
+-Log into the Digital Ocean platform; Go to the Market place and search for Rocket chat droplet
 
-You would then be redirected to a configuration page to specify the resources for the Rocket chat droplet. 
+-Click on create rocket chat droplet  
 
-You also have the option of choosing either to access your droplet using SSH keys or a password. 
+-You would be redirected to a configuration page to specify the resources for the Rocket chat droplet. 
 
-Chose a hostname and deployed. 
+-You also have the option of choosing either to access your droplet using SSH keys or a password. 
 
-Once deployed completely you would be provided with an IP to access your rocket chat server. Rocket chat works on port on 3000, so append 3000 to the IP given and you would then be able to access your Rocket chat server.  
+-Choose a hostname and deploy
 
-Accessed the workspace after filling up the Admin, Organization and Server info 
+-Once deployed completely you would be provided with a Droplet IP to access your rocket chat server. Rocket chat works on port on 3000, So droplet-ip:3000 would give access to the server
+
+-Fill up the Admin, Organization and Server info 
+
+-------------------------------------------------------------------------------------------------------------
+
+  <b>INTEGRATED GITHUB TO ROCKET CHAT</b>
+
+-Open up the administration panel. 
+
+-Click on the Integration tab and click new to create
+
+-Add script on Integration tab to send notifications to the Github_updates channel. 
+
+The script added will generate notifications for the following repository events, Issue events (create, edit, close, reopen, assign, label, etc), Issue comment events, Push events (singular and multiple commits
+
+-------------------------------------------------------------------------------------------------------------
+
+<b>INTEGRATED DOMAIN AND LET'S ENCRYPT SSL CERTIFICATE</b>
+  
+  -On Digital Ocean portal, Add a domain to the Rocket chat droplet
+  
+  -Log into Domain Portal and change A records to droplet-ip, change nameservers to nameservers specified in Digital oceaan
+  
+  -Add lets encrypt SSL certificate to domain using rocketchatctl configure --lets-encrypt --root-url=https://chat.yourcompany.com --letsencrypt-email=admin@yourcompany.com
+  
+  ------------------------------------------------------------------------------------------------------------
+  
+  <b>ROCKET CHAT API TEST</b>
+  
+  <b>Create a new user via an API endpoint</b>
+  
+  -To create a new user, you have to Login(Authenticate). You can also specify an Environment where https://purplecheque.ga the BASE_URL
+  
+  -Using Postman, To login perform a Post https://purplecheque.ga/api/v1/login request with a content type of application/json and username and password specified in the body
+![image](https://user-images.githubusercontent.com/85682126/125151397-af958b00-e13d-11eb-8004-f41ac3303755.png)
+
+  -Grab the User-ID and token, specify these as X-User-Id and X-Auth-Token. Then perform a Post https://purplecheque.ga/api/v1/user.create request, specifying the user details in the body tab as shown in the screenshot ![image](https://user-images.githubusercontent.com/85682126/125151429-ebc8eb80-e13d-11eb-8550-27813d48649b.png)
+
+  
+   <b>Get the room information via an API endpoint</b>
+  
+  -Perform a Get api/v1/rooms.info request using ?roomName=general as params as we are getting information from the Rocket chat server
+  ![image](https://user-images.githubusercontent.com/85682126/125151549-e3bd7b80-e13e-11eb-8c12-8fc9d064ce3a.png)
+
+   <b>Get a list of all user roles in the system via an API endpoint</b>
+  
+  -We perform a Get /api/v1/roles.list request. This provides list of users alongside their roles from the server
+  ![image](https://user-images.githubusercontent.com/85682126/125151453-1e72e400-e13e-11eb-9b65-c96f17140a2d.png)
+
+
