@@ -1,0 +1,1 @@
+{"room":{"_id":"GENERAL","ts":"2021-05-17T15:35:31.225Z","t":"c","name":"general","usernames":[],"msgs":5,"usersCount":5,"default":true,"_updatedAt":"2021-07-10T03:26:59.959Z"},"success":true}
