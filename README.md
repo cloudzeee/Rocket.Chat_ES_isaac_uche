@@ -68,7 +68,7 @@ The script added will generate notifications for the following repository events
   
    <b>Get the room information via an API endpoint</b>
   
-  -Perform a Get api/v1/rooms.info request using ?roomName=general as params as we are getting information from the Rocket chat server. The response file has been uploaded as get_room_response
+  -Perform a Get api/v1/rooms.info request using ?roomName=general as params as shown in the screenshot The response file has been uploaded as get_room_response
   ![image](https://user-images.githubusercontent.com/85682126/125151549-e3bd7b80-e13e-11eb-8c12-8fc9d064ce3a.png)
 
    <b>Get a list of all user roles in the system via an API endpoint</b>
