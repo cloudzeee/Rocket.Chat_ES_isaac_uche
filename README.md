@@ -62,7 +62,8 @@ The script added will generate notifications for the following repository events
   -Using Postman, To login perform a Post https://purplecheque.ga/api/v1/login request with a content type of application/json and username and password specified in the body
 ![image](https://user-images.githubusercontent.com/85682126/125151397-af958b00-e13d-11eb-8004-f41ac3303755.png)
 
-  -Grab the User-ID and token, specify these as X-User-Id and X-Auth-Token. Then perform a Post https://purplecheque.ga/api/v1/user.create request, specifying the user details in the body tab as shown in the screenshot ![image](https://user-images.githubusercontent.com/85682126/125151429-ebc8eb80-e13d-11eb-8550-27813d48649b.png)
+  -Grab the User-ID and token, specify these as X-User-Id and X-Auth-Token. Then perform a Post https://purplecheque.ga/api/v1/user.create request, specifying the user details in the body tab as shown in the screenshot. The reponse has also been added as create_user_response
+  ![image](https://user-images.githubusercontent.com/85682126/125151817-d4d7c880-e140-11eb-9251-24bb21c8c7a6.png)
 
   
    <b>Get the room information via an API endpoint</b>
